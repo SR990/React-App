@@ -40,6 +40,8 @@ function Dashboard() {
       <div className="text-white text-xl">
        {selectedRoom == "Living Room" && <LivingRoom />}
        {selectedRoom == "Kitchen Room" && <KitchenRoom />}
+       {selectedRoom == "Bed Room" }
+       {selectedRoom == "Game Room" }
       </div>
 
       
