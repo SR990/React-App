@@ -15,7 +15,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-const LivingRoom = () => {
+const BedRoom = () => {
   const chartData = [
     { allocation: 60, type: '11:00' },
     { allocation: 45, type: '12:00' },
@@ -25,17 +25,19 @@ const LivingRoom = () => {
 
   return (
     <div className="mt-9">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
-        <div className="bg-gray-800 p-4 rounded-xl text-white w-[300px] height=[150] mb-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div className="bg-gray-800 p-4 rounded-xl text-white w-[300px] mb-2">
           <h3 className="text-lg font-semibold">Air Conditioner</h3>
-          <p className="text-3xl font-bold text-blue-300 mt-4 items-center text-center ">
+          <p className="text-3xl font-bold text-blue-300 mt-4 text-center">
             24°C
           </p>
-          <p className="text-sm text-gray-400 text-center mt-2">Temperature</p>
-          <p className="w-[200px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl h-2 mt-2 flex justify-end"></p>
+          <p className="text-sm text-gray-400 text-center mt-2">
+            Bedroom Temperature
+          </p>
+          <div className="w-[200px] bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl h-2 mt-2"></div>
         </div>
 
-        <div className="bg-gray-800 p-4 rounded-xl text-white mb-2 ">
+        <div className="bg-gray-800 p-4 rounded-xl text-white mb-2">
           <h3 className="text-lg font-semibold">Chart Example</h3>
           <ResponsiveContainer width="100%" height={150}>
             <BarChart data={chartData}>
@@ -58,68 +60,68 @@ const LivingRoom = () => {
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 md:col-span-6 lg:col-span-4 grid grid-cols-3 gap-4">
             <div className="bg-black p-4 text-white border-r border-b">
-              <img src={tv} className="w-10 h-10 mb-5" alt="" />
+              <img src={tv} className="w-10 h-10 mb-5" alt="TV" />
               <div className="flex justify-between">
                 <div>
-                  <p>Smart TV</p>
+                  <p>Television</p>
                   <p className="text-sm text-gray-400">Active for 3 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">2.5kWh</p>
               </div>
             </div>
 
             <div className="bg-black p-4 text-white border-r border-b">
-              <img src={speaker} className="w-10 h-10 mb-5" alt="" />
+              <img src={speaker} className="w-10 h-10 mb-5" alt="Speaker" />
               <div className="flex justify-between">
                 <div>
-                  <p>Speaker</p>
+                  <p>Smart Speaker</p>
                   <p className="text-sm text-gray-400">Active for 2 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">1kWh</p>
               </div>
             </div>
 
             <div className="bg-black p-4 text-white border-b">
-              <img src={router} className="w-10 h-10 mb-5" alt="" />
+              <img src={router} className="w-10 h-10 mb-5" alt="Router" />
               <div className="flex justify-between">
                 <div>
-                  <p>Router</p>
-                  <p className="text-sm text-gray-400">Active for 1 hour</p>
+                  <p>Wi-Fi Router</p>
+                  <p className="text-sm text-gray-400">Active for 24 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">0.5kWh</p>
               </div>
             </div>
 
             <div className="bg-black p-4 text-white border-r">
-              <img src={wifi} className="w-10 h-10 mb-5" alt="" />
+              <img src={wifi} className="w-10 h-10 mb-5" alt="Air Purifier" />
               <div className="flex justify-between">
                 <div>
-                  <p>Wifi</p>
+                  <p>Air Purifier</p>
                   <p className="text-sm text-gray-400">Active for 4 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">1.2kWh</p>
               </div>
             </div>
 
             <div className="bg-black p-4 text-white border-r">
-              <img src={heater} className="w-10 h-10 mb-5" alt="" />
+              <img src={heater} className="w-10 h-10 mb-5" alt="Heater" />
               <div className="flex justify-between">
                 <div>
-                  <p>Heater</p>
+                  <p>Room Heater</p>
                   <p className="text-sm text-gray-400">Active for 5 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">4kWh</p>
               </div>
             </div>
 
             <div className="bg-black p-4 text-white">
-              <img src={socket} className="w-10 h-10 mb-5" alt="" />
+              <img src={socket} className="w-10 h-10 mb-5" alt="Charger" />
               <div className="flex justify-between">
                 <div>
-                  <p>Socket</p>
+                  <p>Phone Charger</p>
                   <p className="text-sm text-gray-400">Active for 6 hours</p>
                 </div>
-                <p className="text-[15px] pr-5">5kWh</p>
+                <p className="text-[15px] pr-5">0.2kWh</p>
               </div>
             </div>
           </div>
@@ -171,4 +173,4 @@ const LivingRoom = () => {
   );
 };
 
-export default LivingRoom;
+export default BedRoom;

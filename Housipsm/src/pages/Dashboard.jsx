@@ -1,14 +1,22 @@
-import { useState } from "react";
-import LivingRoom from "../rooms/LivingRoom";
-import KitchenRoom from "../rooms/KitchenRoom";
+import { useState } from 'react';
+import LivingRoom from '../rooms/LivingRoom';
+import KitchenRoom from '../rooms/KitchenRoom';
+import BedRoom from '../rooms/BedRoom';
+import MovieRoom from '../rooms/MovieRoom';
+import GameRoom from '../rooms/GameRoom';
 
 function Dashboard() {
-  const rooms = ["Living Room", "Kitchen Room", "Bed Room", "Movie Room", "Game Room"];
-  const [selectedRoom, setSelectedRoom] = useState("Living Room");
+  const rooms = [
+    'Living Room',
+    'Kitchen Room',
+    'Bed Room',
+    'Movie Room',
+    'Game Room',
+  ];
+  const [selectedRoom, setSelectedRoom] = useState('Living Room');
 
   return (
     <div className="bg-black rounded-r-2xl min-h-screen w-full p-4">
-      
       <div className="flex space-x-4 items-center mb-6">
         <h1 className="text-white font-semibold text-2xl">Dashboard</h1>
         <input
@@ -19,7 +27,6 @@ function Dashboard() {
         <button className="text-white">🔍</button>
       </div>
 
-      
       <div className="flex space-x-4  mb-6">
         {rooms.map((room) => (
           <button
@@ -27,8 +34,8 @@ function Dashboard() {
             onClick={() => setSelectedRoom(room)}
             className={`px-4 py-2 rounded-full font-medium transition ${
               selectedRoom === room
-                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-black"
-                : "bg-gray-800 text-white"
+                ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-black'
+                : 'bg-gray-800 text-white'
             }`}
           >
             {room}
@@ -36,15 +43,13 @@ function Dashboard() {
         ))}
       </div>
 
-      
       <div className="text-white text-xl">
-       {selectedRoom == "Living Room" && <LivingRoom />}
-       {selectedRoom == "Kitchen Room" && <KitchenRoom />}
-       {selectedRoom == "Bed Room" }
-       {selectedRoom == "Game Room" }
+        {selectedRoom == 'Living Room' && <LivingRoom />}
+        {selectedRoom == 'Kitchen Room' && <KitchenRoom />}
+        {selectedRoom == 'Bed Room' && <BedRoom />}
+        {selectedRoom == 'Movie Room' && <MovieRoom />}
+        {selectedRoom == 'Game Room' && <GameRoom />}
       </div>
-
-      
     </div>
   );
 }
